@@ -14,22 +14,20 @@ WriteLine("y = k1 * x + b1, y = k2 * x + b2 ");
 WriteLine();
 
 Write("Введите k1: ");
-int k1 = int.Parse(ReadLine());
+double k1 = double.Parse(ReadLine());
 
 Write("Введите b1: ");
-int b1 = int.Parse(ReadLine());
+double b1 = double.Parse(ReadLine());
 
 Write("Введите k2: ");
-int k2 = int.Parse(ReadLine());
+double k2 = double.Parse(ReadLine());
 
 Write("Введите b2: ");
-int b2 = int.Parse(ReadLine());
+double b2 = double.Parse(ReadLine());
 double[] cross = Cross(k1,b1,k2,b2);
-double x = cross[0];
-double y = cross[1];
 Write($"Точка пересечения прямых: [{cross[0]:f2},{cross[1]:f2}]");
 
-double[] Cross(int k1, int b1, int k2, int b2)
+double[] Cross(double k1, double b1, double k2, double b2)
 {
     double[] cross = new double[2];
     cross[0] = (b1-b2)/(k2-k1);
